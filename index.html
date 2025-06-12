@@ -2,100 +2,192 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ana Carolina Lima - Portfólio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <style>
+    /* Paleta: #cdb4db (lavanda), #ffc8dd (rosa claro), #ffafcc (rosa médio), #bde0fe (azul claro), #a2d2ff (azul mais escuro) */
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff9fb;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffc8dd;
       color: #4b375a;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     header {
-      background-color: #ffd6e8;
-      padding: 2rem;
+      background-color: #cdb4db;
+      padding: 3rem 1.5rem 4rem;
       text-align: center;
+      color: #4b375a;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     }
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.8rem;
+      margin-bottom: 0.4rem;
+      font-weight: 700;
     }
-    nav {
-      margin-top: 1rem;
-    }
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #4b375a;
-      font-weight: bold;
-    }
-    section {
-      padding: 4rem 2rem;
-      max-width: 800px;
+    header p {
+      font-size: 1.1rem;
+      font-weight: 500;
+      max-width: 520px;
       margin: 0 auto;
+      white-space: pre-line; /* para respeitar quebras de linha */
     }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #e89eb5;
+
+    section {
+      max-width: 850px;
+      margin: 3rem auto 5rem;
+      background-color: #fff9fb;
+      border-radius: 16px;
+      padding: 2.5rem 3rem;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    }
+
+    /* Botão pesquisa */
+    .btn-pesquisa {
+      display: inline-block;
+      margin-top: 1.6rem;
+      padding: 0.85rem 2.3rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: white;
+      background: linear-gradient(135deg, #a2d2ff, #bde0fe);
+      border: none;
+      border-radius: 35px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(162,210,255,0.6);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    .btn-pesquisa:hover {
+      background: linear-gradient(135deg, #8cc0ff, #a1cfff);
+      box-shadow: 0 6px 16px rgba(130,190,255,0.9);
+    }
+
+    /* Contato - botões */
+    #contato {
+      text-align: center;
+      padding-top: 2rem;
+    }
+    .contato-btns {
+      margin-top: 1.2rem;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .contato-btns a {
+      background: linear-gradient(135deg, #ffafcc, #ffc8dd);
+      padding: 0.85rem 2.2rem;
+      border-radius: 35px;
+      color: #4b375a;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(255,175,204,0.6);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+      min-width: 140px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .contato-btns a:hover {
+      background: linear-gradient(135deg, #ff97b8, #ffafcc);
+      box-shadow: 0 6px 16px rgba(255,150,185,0.9);
+    }
+
+    /* Blog */
+    #blog h2 {
+      color: #b183a1;
+      margin-bottom: 1.4rem;
     }
     .blog-post {
       margin-bottom: 2rem;
+      padding-bottom: 1.6rem;
+      border-bottom: 1px solid #f0d9e9;
     }
+    .blog-post h3 {
+      margin-bottom: 0.4rem;
+      color: #9e7499;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    .blog-post h3:hover {
+      color: #a2d2ff;
+    }
+    .blog-post p {
+      font-size: 1rem;
+      color: #5c496b;
+    }
+    /* Footer */
     footer {
+      background-color: #cdb4db;
       text-align: center;
-      padding: 2rem;
-      background-color: #ffd6e8;
+      padding: 2rem 1rem;
       font-size: 0.9rem;
-    }
-    .contact-icons a {
-      margin: 0 0.5rem;
       color: #4b375a;
+      box-shadow: 0 -3px 8px rgba(0,0,0,0.07);
+      user-select: none;
+      line-height: 1.4;
     }
-    .contact-icons a:hover {
-      text-decoration: underline;
+    footer p + p {
+      margin-top: 0.3rem;
     }
-    .button-link {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #e89eb5;
-      color: white;
+
+    /* Navegação simples */
+    nav {
+      margin-top: 1.3rem;
+    }
+    nav a {
+      color: #4b375a;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+      font-weight: 600;
+      margin: 0 1.1rem;
+      font-size: 1.05rem;
+      transition: color 0.25s ease;
     }
-    .button-link:hover {
-      background-color: #d17898;
+    nav a:hover {
+      color: #a2d2ff;
     }
-    .blog-post img {
-      width: 100%;
-      border-radius: 8px;
-      margin: 1rem 0;
-    }
-    .embed-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      max-width: 100%;
-      margin-top: 2rem;
-    }
-    .embed-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
+
+    @media (max-width: 600px) {
+      section {
+        padding: 2rem 1.5rem;
+        margin: 2rem 1rem 4rem;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      nav a {
+        margin: 0 0.7rem;
+        font-size: 1rem;
+      }
+      .contato-btns {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .contato-btns a {
+        min-width: auto;
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
   <header data-aos="fade-down">
     <h1>Ana Carolina Lima</h1>
-    <p>Neurociência e Comportamento</p>
+    <p>Sou Ana Carolina Lima, caiçara, e vivo há cinco anos na cidade com o maior PIB da América Latina. Mãe do Luke, me interesso profundamente por tecnologia, ciência e desenvolvimento humano.
+<br><br>
+Sou formada em Psicologia e em processo de especialização em Neurociências e Comportamento, buscando entender como a mente, o corpo e o ambiente se conectam.
+<br><br>
+Apaixonada por astronomia, moda, voluntariado e viagens, e claro, pelo Corinthians. Encontro nessas paixões energia para olhar o mundo de forma única.</p>
     <nav>
       <a href="#sobre">Sobre</a>
       <a href="#blog">Blog</a>
@@ -106,63 +198,42 @@
 
   <section id="sobre" data-aos="fade-up">
     <h2>Sobre Mim</h2>
-    <p>Sou Ana Carolina Lima, caiçara, e vivo há cinco anos na cidade com o maior PIB da América Latina. Mãe do Luke, me interesso profundamente por tecnologia, ciência e desenvolvimento humano.
+    <p>Meu trabalho une sensibilidade, ciência e escuta profunda para contribuir no desenvolvimento humano e na neuroplasticidade do comportamento.</p>
+  </section>
 
-Sou formada em Psicologia e em processo de especialização em Neurociências e Comportamento, buscando entendeer como a mente, o corpo e o ambiente se conectam.
-    
-    Apaixonada por astronomia, moda, voluntariado e viagens, e claro, pelo Corinthians. Encontro nessas paixões energia para olhar o mundo de forma única.</p>
+  <section id="pesquisa" data-aos="fade-up">
+    <h2>Pesquisa</h2>
+    <p>Estudo o impacto da participação em torcidas organizadas sobre indicadores psicossociais e neurobiológicos de pertencimento em indivíduos de classes populares. O objetivo é compreender como esses grupos influenciam o sentimento de pertencimento e o bem-estar coletivo.</p>
+    <a class="btn-pesquisa" href="https://docs.google.com/forms/d/e/1FAIpQLSdZDQS5h7y0s_v0LljfxdSjBf6LhWSMSf8xbKgz_Q3TdtZRCA/viewform?usp=header" target="_blank" rel="noopener noreferrer">Responder à Pesquisa</a>
   </section>
 
   <section id="blog" data-aos="fade-up">
     <h2>Blog</h2>
-
     <div class="blog-post">
-      <h3>Psicologia na Primeira Infância</h3>
-      <img src="https://source.unsplash.com/800x400/?baby,psychology" alt="Imagem representando a primeira infância">
+      <h3 tabindex="0" onclick="alert('Abrir texto completo: Psicologia na Primeira Infância')" style="cursor:pointer;">Psicologia na Primeira Infância</h3>
       <p>A base da vida psíquica e emocional é construída nos primeiros anos. Falo sobre vínculo, acolhimento e o papel do ambiente no desenvolvimento da criança.</p>
     </div>
-
     <div class="blog-post">
-      <h3>Neuroplasticidade e a Jornada com o Luke</h3>
-      <img src="https://source.unsplash.com/800x400/?mother,child" alt="Imagem representando a jornada mãe e filho">
-      <p>Observar o desenvolvimento do meu filho foi uma das maiores lições sobre como o cérebro pode se moldar com amor, estímulo e segurança.</p>
+      <h3 tabindex="0" onclick="alert('Abrir texto completo: Neuroplasticidade e Desenvolvimento Infantil')" style="cursor:pointer;">Neuroplasticidade e Desenvolvimento Infantil</h3>
+      <p>Exploro como o cérebro se adapta e se transforma com as experiências, influenciando o comportamento e as aprendizagens desde cedo.</p>
     </div>
-
     <div class="blog-post">
-      <h3>Psicologia no Amor</h3>
-      <img src="https://source.unsplash.com/800x400/?love,psychology" alt="Imagem representando o amor sob o olhar psicológico">
-      <p>O amor vai além do romantismo. Falo sobre apego, projeções, traumas e a complexidade de amar (e ser amado) com consciência.</p>
-    </div>
-
-    <div class="blog-post">
-      <h3>Sobre Adoção e Sentido de Pertencimento</h3>
-      <img src="https://source.unsplash.com/800x400/?family,identity" alt="Imagem representando adoção e pertencimento">
-      <p>Ser adotada transformou minha forma de olhar para a vida. Aqui escrevo sobre minhas raízes, identidade e como encontrei abrigo no amor que escolhe e acolhe.</p>
-    </div>
-  </section>
-
-  <section id="pesquisa" data-aos="fade-up">
-    <h2>Minha Pesquisa</h2>
-    <p>Minha pesquisa tem como tema: <strong>"O impacto da participação em torcidas organizadas sobre indicadores psicossociais e neurobiológicos de pertencimento em indivíduos de classes marginalizadas"</strong>. O estudo busca compreender como o sentimento de pertencimento pode ser influenciado por contextos coletivos de forte identificação, especialmente entre populações vulneráveis.</p>
-    <a class="button-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdZDQS5h7y0s_v0LljfxdSjBf6LhWSMSf8xbKgz_Q3TdtZRCA/viewform?usp=header" target="_blank" rel="noopener noreferrer">Responder à Pesquisa</a>
-
-    <div class="embed-container">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdZDQS5h7y0s_v0LljfxdSjBf6LhWSMSf8xbKgz_Q3TdtZRCA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+      <h3 tabindex="0" onclick="alert('Abrir texto completo: Psicologia do Amor')" style="cursor:pointer;">Psicologia do Amor</h3>
+      <p>Investigo as bases emocionais e neurocientíficas do amor e das relações humanas, trazendo uma visão profunda e contemporânea.</p>
     </div>
   </section>
 
   <section id="contato" data-aos="fade-up">
     <h2>Contato</h2>
-    <p>Você pode me encontrar nas redes sociais ou enviar um e-mail diretamente:</p>
-    <div class="contact-icons">
-      <a href="https://www.instagram.com/cacaubonilha/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a href="https://www.linkedin.com/in/anacarolglima/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="mailto:carolinagbonilha@gmail.com">E-mail</a>
+    <div class="contato-btns">
+      <a href="mailto:ana.carolina@email.com" target="_blank" rel="noopener noreferrer">E-mail</a>
+      <a href="https://www.linkedin.com/in/anacarolinalima" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://www.instagram.com/anacarolinalima" target="_blank" rel="noopener noreferrer">Instagram</a>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Ana Carolina Lima. Todos os direitos reservados.</p>
+    <p>© 2025 Ana Carolina Lima</p>
     <p>A escuta começa onde a teoria falha.</p>
   </footer>
 
