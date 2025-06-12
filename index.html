@@ -2,166 +2,72 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ana Carolina Lima - Portfólio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <style>
-    /* Paleta girly e profissional: rosa, roxo, amarelo, off-white */
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #fff9fb;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff9fb;
       color: #4b375a;
-      line-height: 1.6;
     }
     header {
       background-color: #ffd6e8;
-      padding: 2.5rem 1rem;
+      padding: 2rem;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(219, 136, 171, 0.3);
     }
     header h1 {
-      font-size: 3rem;
-      margin: 0 0 0.25rem 0;
-      color: #633974;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-    }
-    header p {
-      margin: 0;
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: #8a5c8e;
-      font-style: italic;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
     }
     nav {
       margin-top: 1rem;
     }
     nav a {
-      color: #633974;
-      font-weight: 600;
       margin: 0 1rem;
       text-decoration: none;
-      transition: color 0.3s ease;
+      color: #4b375a;
+      font-weight: bold;
     }
-    nav a:hover {
+    section {
+      padding: 4rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
       color: #e89eb5;
     }
-
-    main {
-      max-width: 900px;
-      margin: 2rem auto 4rem auto;
-      padding: 0 1rem;
+    .blog-post {
+      margin-bottom: 2rem;
     }
-
-    section#sobre {
-      background: #fff0f6;
-      padding: 2rem 2rem 3rem 2rem;
-      border-radius: 12px;
-      box-shadow: 0 6px 14px rgba(232, 158, 181, 0.3);
-      text-align: center;
-      margin-bottom: 3rem;
-      position: relative;
-    }
-
-    #sobre p {
-      max-width: 650px;
-      margin: 1rem auto 0 auto;
-      font-size: 1.1rem;
-      color: #5e3e66;
-    }
-
-    #btn-pesquisa {
-      margin-top: 2rem;
-      display: inline-block;
-      background: #e89eb5;
-      color: #fff;
-      font-weight: 600;
-      padding: 0.75rem 1.8rem;
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 1.1rem;
-      box-shadow: 0 6px 12px rgba(232, 158, 181, 0.5);
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      cursor: pointer;
-      user-select: none;
-    }
-    #btn-pesquisa:hover {
-      background-color: #d3749c;
-      transform: scale(1.05);
-    }
-
-    section#blog-preview {
-      margin-bottom: 3rem;
-    }
-
-    section#blog-preview h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: #633974;
-      text-align: center;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-    }
-
-    .post-preview {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(232, 158, 181, 0.15);
-      padding: 1.5rem 2rem;
-      margin-bottom: 1.8rem;
-      transition: box-shadow 0.3s ease;
-      cursor: pointer;
-      color: #633974;
-      text-decoration: none;
-      display: block;
-    }
-    .post-preview:hover {
-      box-shadow: 0 12px 20px rgba(232, 158, 181, 0.35);
-    }
-
-    .post-preview h3 {
-      margin-top: 0;
-      margin-bottom: 0.8rem;
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-    }
-
-    .post-preview p {
-      font-size: 1rem;
-      color: #8a5c8e;
-      line-height: 1.4;
-      margin: 0;
-    }
-
     footer {
-      background-color: #ffd6e8;
-      padding: 1.8rem 1rem;
       text-align: center;
-      font-size: 0.95rem;
-      color: #633974;
-      font-style: italic;
-      box-shadow: inset 0 1px 0 #e89eb5;
-      user-select: none;
+      padding: 2rem;
+      background-color: #ffd6e8;
+      font-size: 0.9rem;
     }
-    footer p:last-child {
-      margin-top: 0.5rem;
-      font-weight: 600;
-      color: #8a5c8e;
+    .contact-icons a {
+      margin: 0 0.5rem;
+      color: #4b375a;
     }
-
-    /* Responsividade simples */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-      section#sobre p, .post-preview p {
-        font-size: 1rem;
-      }
-      nav a {
-        margin: 0 0.6rem;
-      }
+    .contact-icons a:hover {
+      text-decoration: underline;
+    }
+    .button-link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #e89eb5;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .button-link:hover {
+      background-color: #d17898;
     }
   </style>
 </head>
@@ -171,44 +77,56 @@
     <p>Neurociência e Comportamento</p>
     <nav>
       <a href="#sobre">Sobre</a>
-      <a href="#blog-preview">Blog</a>
+      <a href="#blog">Blog</a>
+      <a href="#pesquisa">Pesquisa</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
 
-  <main>
-    <section id="sobre" data-aos="fade-up">
-      <h2>Sobre Mim</h2>
-      <p>Sou psicóloga formada e estou me especializando em Neurociências e Comportamento, com foco em primeira infância e relações humanas. Mãe do Luke, meu maior laboratório de amor e neuroplasticidade. Meu trabalho une sensibilidade, ciência e escuta profunda.</p>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZDQS5h7y0s_v0LljfxdSjBf6LhWSMSf8xbKgz_Q3TdtZRCA/viewform?usp=header" 
-         target="_blank" 
-         rel="noopener noreferrer" 
-         id="btn-pesquisa"
-         data-aos="zoom-in"
-         data-aos-delay="300"
-      >Responder Pesquisa</a>
-    </section>
+  <section id="sobre" data-aos="fade-up">
+    <h2>Sobre Mim</h2>
+    <p>Sou psicóloga formada e estou me especializando em Neurociências e Comportamento, com foco em primeira infância e relações humanas. Mãe do Luke, meu maior laboratório de amor e neuroplasticidade. Meu trabalho une sensibilidade, ciência e escuta profunda.</p>
+  </section>
 
-    <section id="blog-preview" data-aos="fade-up" data-aos-delay="100">
-      <h2>Últimos Posts</h2>
+  <section id="blog" data-aos="fade-up">
+    <h2>Blog</h2>
 
-      <a href="blog.html#post1" class="post-preview" data-aos="fade-right" data-aos-delay="200">
-        <h3>Psicologia na Primeira Infância</h3>
-        <p>A base da vida psíquica e emocional é construída nos primeiros anos. Falo sobre vínculo, acolhimento e o papel do ambiente no desenvolvimento da criança.</p>
-      </a>
+    <div class="blog-post">
+      <h3>Psicologia na Primeira Infância</h3>
+      <p>A base da vida psíquica e emocional é construída nos primeiros anos. Falo sobre vínculo, acolhimento e o papel do ambiente no desenvolvimento da criança.</p>
+    </div>
 
-      <a href="blog.html#post2" class="post-preview" data-aos="fade-right" data-aos-delay="350">
-        <h3>Neuroplasticidade e a Jornada com o Luke</h3>
-        <p>Observar o desenvolvimento do meu filho foi uma das maiores lições sobre como o cérebro pode se moldar com amor, estímulo e segurança.</p>
-      </a>
+    <div class="blog-post">
+      <h3>Neuroplasticidade e a Jornada com o Luke</h3>
+      <p>Observar o desenvolvimento do meu filho foi uma das maiores lições sobre como o cérebro pode se moldar com amor, estímulo e segurança.</p>
+    </div>
 
-      <a href="blog.html#post3" class="post-preview" data-aos="fade-right" data-aos-delay="500">
-        <h3>Psicologia no Amor</h3>
-        <p>O amor vai além do romantismo. Falo sobre apego, projeções, traumas e a complexidade de amar (e ser amado) com consciência.</p>
-      </a>
+    <div class="blog-post">
+      <h3>Psicologia no Amor</h3>
+      <p>O amor vai além do romantismo. Falo sobre apego, projeções, traumas e a complexidade de amar (e ser amado) com consciência.</p>
+    </div>
 
-    </section>
-  </main>
+    <div class="blog-post">
+      <h3>Sobre Adoção e Sentido de Pertencimento</h3>
+      <p>Ser adotada transformou minha forma de olhar para a vida. Aqui escrevo sobre minhas raízes, identidade e como encontrei abrigo no amor que escolhe e acolhe.</p>
+    </div>
+  </section>
+
+  <section id="pesquisa" data-aos="fade-up">
+    <h2>Minha Pesquisa</h2>
+    <p>Minha pesquisa tem como tema: <strong>"O impacto da participação em torcidas organizadas sobre indicadores psicossociais e neurobiológicos de pertencimento em indivíduos de classes marginalizadas"</strong>. O estudo busca compreender como o sentimento de pertencimento pode ser influenciado por contextos coletivos de forte identificação, especialmente entre populações vulneráveis.</p>
+    <a class="button-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdZDQS5h7y0s_v0LljfxdSjBf6LhWSMSf8xbKgz_Q3TdtZRCA/viewform?usp=header" target="_blank" rel="noopener noreferrer">Responder à Pesquisa</a>
+  </section>
+
+  <section id="contato" data-aos="fade-up">
+    <h2>Contato</h2>
+    <p>Você pode me encontrar nas redes sociais ou enviar um e-mail diretamente:</p>
+    <div class="contact-icons">
+      <a href="https://www.instagram.com/cacaubonilha/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.linkedin.com/in/anacarolglima/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:carolinagbonilha@gmail.com">E-mail</a>
+    </div>
+  </section>
 
   <footer>
     <p>© 2025 Ana Carolina Lima. Todos os direitos reservados.</p>
@@ -217,10 +135,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 800,
-      once: true,
-    });
+    AOS.init();
   </script>
 </body>
 </html>
