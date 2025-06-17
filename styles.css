@@ -90,32 +90,112 @@ section p {
   box-shadow: 0 8px 20px rgba(255, 137, 181, 0.7);
 }
 
-/* Botões secundários */
-.btn-secondary {
-  display: inline-block;
-  background-color: #bde0fe;
-  color: #4b375a;
-  font-weight: 600;
-  padding: 0.6rem 1.3rem;
-  border-radius: 20px;
-  text-decoration: none;
-  box-shadow: 0 3px 7px rgba(189, 224, 254, 0.7);
-  transition: background-color 0.3s ease;
-  margin-top: 0.7rem;
+/* Contato - botões */
+.contato-btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
 }
 
-.btn-secondary:hover {
-  background-color: #8fc7ff;
-  box-shadow: 0 5px 15px rgba(143, 199, 255, 0.9);
+.contato-btns a {
+  background: linear-gradient(135deg, #ffafcc, #ffc8dd);
+  padding: 0.85rem 2.2rem;
+  border-radius: 35px;
+  color: #4b375a;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(255, 175, 204, 0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  min-width: 140px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contato-btns a:hover {
+  background: linear-gradient(135deg, #ff97b8, #ffafcc);
+  box-shadow: 0 6px 16px rgba(255, 150, 185, 0.9);
 }
 
 /* Blog posts */
-.blog-post {
-  margin-bottom: 3rem;
+.blog-list {
+  list-style: none;
+  padding-left: 0;
 }
 
-.blog-post img {
-  width: 100%;
-  border-radius: 10px;
-  margin: 1rem 0;
-  box-shadow
+.blog-post {
+  margin-bottom: 2.5rem;
+}
+
+.blog-post a {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #9e7499;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.blog-post a:hover {
+  color: #a2d2ff;
+  text-decoration: underline;
+}
+
+.blog-post p {
+  font-size: 1rem;
+  color: #5c496b;
+  margin-top: 0.3rem;
+}
+
+/* Footer */
+footer {
+  background-color: #cdb4db;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: #4b375a;
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.07);
+  user-select: none;
+  line-height: 1.4;
+}
+
+footer p + p {
+  margin-top: 0.3rem;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .container {
+    margin: 2rem 1rem;
+    padding: 0 1rem;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  nav a {
+    margin: 0 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .contato-btns {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contato-btns a {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .blog-post a {
+    font-size: 1.1rem;
+  }
+}
